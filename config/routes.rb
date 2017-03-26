@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :subtasks
   namespace :admin do
     resources :to_dos
-resources :users
+    resources :users
+    resources :subtasks
 
     root to: "to_dos#index"
   end
